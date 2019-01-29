@@ -104,8 +104,8 @@
   \authorbox[90pt]{\emph{Antonio Vergari}}{Max-Plank-Institute IS}{\dag}\hspace{2pt}
     \authorbox[100pt]{Alejandro Molina}{TU Darmstadt}{\ddag}\hspace{-10pt}
     \authorbox[90pt]{Robert Peharz}{University of Cambridge}{\S}\\[5pt]
-    \authorbox[100pt]{Zoubin Ghahramani}{University of Cambridge\\
-      Uber AI Labs}{\S}\hspace{-8pt}
+    \authorbox[100pt]{Zoubin Ghahramani}{University of Cambridge\\\noindent
+      \hspace{3pt}Uber AI Labs}{\S}\hspace{-8pt}
     \authorbox[100pt]{Kristian Kersting}{TU Darmstadt}{\ddag}\hspace{-10pt}
     \authorbox[90pt]{Isabel Valera}{Max-Plank-Institute IS}{\dag}\\
     % \vspace{15pt}\includegraphics[width=20pt]{figures/logo1}
@@ -122,17 +122,17 @@
 %       \par \textbf{for Intelligent Systems}}
 % \department{Probabilistic Learning}
 \institutelogo{figures/mpi-minerva}
-\institutesize{30pt}
+\institutesize{40pt}
 
 % \secondinstitute{\textbf{TU Darmstadt}}
 % \seconddepartment{Computer Science\\Department}
 \secondinstitutelogo{figures/tu-darmstadt-athena.png}
-\secondinstitutesize{25pt}
+\secondinstitutesize{35pt}
 
 % \thirdinstitute{\textbf{University of} \\\textbf{Cambridge}}
 % \thirddepartment{Engineering Department}
 \thirdinstitutelogo{figures/cam-logo-big.png}
-\thirdinstitutesize{25pt}
+\thirdinstitutesize{35pt}
 
 
 % \lablogo{\includegraphics[height=25pt]{figures/cam-logo-big-gray}}
@@ -173,104 +173,137 @@
 
 \begin{frame}[t, htt=bgrey2]
   \frametitle{Exploratory data analysis}
-  
-\end{frame}
-
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Real world data}
-
   \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.4\linewidth]{figures/abda-grid-empty}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    Real world data is\par
+  \begin{minipage}[t]{0.4\linewidth}\vspace{15pt}
+    \includegraphics[width=.5\linewidth]{figures/abda-grid-empty}
+  \end{minipage}\hfill\begin{minipage}[t]{0.55\linewidth}
+    \vspace{20pt}
+    Before any machine learning task\ldots\\[20pt]
+    \ldots there is the need of \\[5pt]
+    \hspace{5pt}\htt[lacamlilac]{\emph{\textbf{understanding}}} data\\[-2pt]
+    \hspace{5pt}\htt[lacamlilac]{\emph{\textbf{making sense}}} of data\\
   \end{minipage}  
 \end{frame}
 
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Real world data}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.4\linewidth]{figures/abda-grid-empty}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+%     \vspace{-150pt}
+%     Real world data is\par
+%   \end{minipage}  
+% \end{frame}
+
+
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Real world data}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+%     \vspace{-150pt}
+%     { Real world data is}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{heterogeneous}}}\\
+%     \comment[\normalsize]{mixed discrete and continuous RVs}{}\\
+%     \comment[\normalsize]{mixed likelihood models}{}\\
+%     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+%     % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+%   \end{minipage}  
+% \end{frame}
+
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Real world data}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-miss-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+%     \vspace{-150pt}
+%     { Real world data is}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{heterogeneous}}}\\
+%     % \comment[\normalsize]{mixed discrete and continuous RVs}{}\\
+%     % \comment[\normalsize]{mixed likelihood models}{}\\
+%     \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+%     \comment[\normalsize]{missing values}{}\\
+%     %\htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+%   \end{minipage}  
+% \end{frame}
+
+
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Real world data}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-miss-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+%     \vspace{-150pt}
+%     { Real world data is}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{heterogeneous}}}\\
+%     % \comment[\normalsize]{mixed discrete and continuous RVs}{}\\
+%     % \comment[\normalsize]{mixed likelihood models}{}\\
+%     \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+%     % \textbf{potentially}
+%     % \htt[lacamlilac]{\textbf{\emph{spourious}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{dirty}}}\\
+%     \comment[\normalsize]{containing anomalies: novelties, outliers, etc\dots}{}\\
+%   \end{minipage}  
+% \end{frame}
+
+
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Real world data}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.4\linewidth]{figures/abda-grid-empty}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+%     \vspace{0pt}
+%     Real world data is\par
+%   \end{minipage}  
+% \end{frame}
 
 \begin{frame}[t, htt=bgrey2]
-  \frametitle{Real world data}
+  \frametitle{Exploratory data analysis}
 
   \large
   \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    { Real world data is}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{heterogeneous}}}\\
-    \comment[\normalsize]{mixed discrete and continuous RVs}{}\\
-    \comment[\normalsize]{mixed likelihood models}{}\\
+    \vspace{5pt}
+    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \vspace{10pt}
+    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+    \raggedleft\begin{minipage}[t]{.9\linewidth}
+      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\[5pt]}
+    {\comment[\normalsize]{is it a positive RV?}{}\\[-17pt]
+      \comment[\normalsize]{is it an ordinal RV?}{}\\}
+    \end{minipage}    
     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
     % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
   \end{minipage}  
 \end{frame}
 
 \begin{frame}[t, htt=bgrey2]
-  \frametitle{Real world data}
-
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-miss-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    { Real world data is}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{heterogeneous}}}\\
-    % \comment[\normalsize]{mixed discrete and continuous RVs}{}\\
-    % \comment[\normalsize]{mixed likelihood models}{}\\
-    \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
-    \comment[\normalsize]{missing values}{}\\
-    %\htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
-  \end{minipage}  
-\end{frame}
-
-
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Real world data}
-
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-miss-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    { Real world data is}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{heterogeneous}}}\\
-    % \comment[\normalsize]{mixed discrete and continuous RVs}{}\\
-    % \comment[\normalsize]{mixed likelihood models}{}\\
-    \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
-    % \textbf{potentially}
-    % \htt[lacamlilac]{\textbf{\emph{spourious}}}\\
-    \htt[lacamlilac]{\textbf{\emph{dirty}}}\\
-    \comment[\normalsize]{containing anomalies: novelties, outliers, etc\dots}{}\\
-  \end{minipage}  
-\end{frame}
-
-
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Real world data}
-
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.4\linewidth]{figures/abda-grid-empty}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{0pt}
-    Real world data is\par
-  \end{minipage}  
-\end{frame}
-
-
-\begin{frame}[t, htt=bgrey2]
   \frametitle{Exploratory data analysis}
 
   \large
   \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+    \vspace{5pt}
+    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-    {The ``data understanding'' pipeline}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
-    \comment[\normalsize]{is it a positive continuous RV?}{}\\
-    \comment[\normalsize]{is it an ordinal RV?}{}\\
+    \vspace{10pt}
+    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+    \raggedleft\begin{minipage}[t]{.9\linewidth}
+      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
+              types}}}\\[-2pt]}
+      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\[5pt]}
+    {\comment[\normalsize]{is it a Gaussian?}{}\\[-17pt]
+      \comment[\normalsize]{is it a Poisson?}{}\\}
+    \end{minipage}    
     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
     % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
   \end{minipage}  
@@ -281,84 +314,235 @@
 
   \large
   \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+    \vspace{5pt}
+    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-    {The ``data understanding'' pipeline}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
-    \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
-    \comment[\normalsize]{is it Gaussian?}{}\\
-    \comment[\normalsize]{is it Poisson?}{}\\
+    \vspace{10pt}
+    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+    \raggedleft\begin{minipage}[t]{.9\linewidth}
+      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
+              types}}}\\[-2pt]}
+      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+              models}}}\\[-2pt]}
+      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer dependencies}}}\\[5pt]}
+    \comment[\normalsize]{does $X^{4}$ depend on $X^{1}$?}{}
+    \end{minipage}    
+    % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+    % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+  \end{minipage}  
+\end{frame}
+
+\begin{frame}[t, htt=bgrey2]
+  \frametitle{Exploratory data analysis}
+
+  \large
+  \begin{minipage}[t]{0.6\linewidth}
+    \vspace{5pt}
+    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \vspace{10pt}
+    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+    \raggedleft\begin{minipage}[t]{.9\linewidth}
+      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
+              types}}}\\[-2pt]}
+      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+              models}}}\\[-2pt]}
+      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+              dependencies}}}\\[-2pt]}
+      {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
+              values estimation}}}\\[-2pt]}
+    
+    \end{minipage}    
+    % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+    % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+  \end{minipage}  
+\end{frame}
+
+\begin{frame}[t, htt=bgrey2]
+  \frametitle{Exploratory data analysis}
+  \large
+  \begin{minipage}[t]{0.6\linewidth}
+    \vspace{5pt}
+    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \vspace{10pt}
+    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+    \raggedleft\begin{minipage}[t]{.9\linewidth}
+      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
+              types}}}\\[-2pt]}
+      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+              models}}}\\[-2pt]}
+      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+              dependencies}}}\\[-2pt]}
+      {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
+              values estimation}}}\\[-2pt]}
+      {\textbf{3.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{anomaly detection}}}\\[-2pt]}
+    \end{minipage}    
+    % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+    % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+  \end{minipage}  
+\end{frame}
+
+\begin{frame}[t, htt=bgrey2]
+  \frametitle{Exploratory data analysis}
+  \large
+  \begin{minipage}[t]{0.6\linewidth}
+    \vspace{5pt}
+    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \vspace{10pt}
+    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+    \raggedleft\begin{minipage}[t]{.9\linewidth}
+      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
+              types}}}\\[-2pt]}
+      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+              models}}}\\[-2pt]}
+      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+              dependencies}}}\\[-2pt]}
+      {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
+              values estimation}}}\\[-2pt]}
+      {\textbf{3.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{anomaly
+              detection}}}\\[-2pt]}
+      {\textbf{4.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{pattern mining}}}\\[-2pt]}
+    \end{minipage}    
+    % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+    % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+  \end{minipage}  
+\end{frame}
+
+\begin{frame}[t, htt=bgrey2]
+  \frametitle{Exploratory data analysis}
+  \large
+  \begin{minipage}[t]{0.6\linewidth}
+    \vspace{5pt}
+    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \vspace{10pt}
+    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+    \raggedleft\begin{minipage}[t]{.9\linewidth}
+      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
+              types}}}\\[-2pt]}
+      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+              models}}}\\[-2pt]}
+      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+              dependencies}}}\\[-2pt]}
+      {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
+              values estimation}}}\\[-2pt]}
+      {\textbf{3.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{anomaly
+              detection}}}\\[-2pt]}
+      {\textbf{4.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{pattern
+              mining}}}\\[2pt]}
+    \end{minipage}
+    
+    {\small\ldots what if there is \emph{\textbf{no statistician around}} ?}
     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
     % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
   \end{minipage}  
 \end{frame}
 
 
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Exploratory data analysis}
 
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-    {The ``data understanding'' pipeline}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
-    \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
-    \htt[lacamlilac]{\textbf{\emph{infer dependency structure}}} among
-    RVs\\
-    \comment[\normalsize]{does $X^{4}$ depend on $X^{1}$?}{}\\
-    \comment[\normalsize]{structure learning}{}\\
-    % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
-  \end{minipage}  
-\end{frame}
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Exploratory data analysis}
 
-
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Exploratory data analysis}
-
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-    {The ``data understanding'' pipeline}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
-    \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
-    \htt[lacamlilac]{\textbf{\emph{infer dependency structure}}} among
-    RVs\\
-    \htt[lacamlilac]{\textbf{\emph{missing value estimation}}}\\
-  \end{minipage}  
-\end{frame}
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+%     \vspace{-150pt}
+%     {The ``data understanding'' pipeline}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
+%     \comment[\normalsize]{is it Gaussian?}{}\\
+%     \comment[\normalsize]{is it Poisson?}{}\\
+%     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+%     % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+%   \end{minipage}  
+% \end{frame}
 
 
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Exploratory data analysis}
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Exploratory data analysis}
 
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-    {The ``data understanding'' pipeline}\\[5pt]
-    \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
-    \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
-    \htt[lacamlilac]{\textbf{\emph{infer dependency structure}}} among
-    RVs\\
-    \htt[lacamlilac]{\textbf{\emph{missing value estimation}}}\\
-    \htt[lacamlilac]{\textbf{\emph{anomaly detection}}}\\
-  \end{minipage}  
-\end{frame}
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+%     \vspace{-150pt}
+%     {The ``data understanding'' pipeline}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer dependency structure}}}\\
+%     \comment[\normalsize]{does $X^{4}$ depend on $X^{1}$?}{}\\
+%     \comment[\normalsize]{structure learning}{}\\
+%     % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+%   \end{minipage}  
+% \end{frame}
+
+
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Exploratory data analysis}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+%     \vspace{-150pt}
+%     {The ``data understanding'' pipeline}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer dependency structure}}} among
+%     RVs\\
+%     \htt[lacamlilac]{\textbf{\emph{missing value estimation}}}\\
+%   \end{minipage}  
+% \end{frame}
+
+
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Exploratory data analysis}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+%     \vspace{-150pt}
+%     {The ``data understanding'' pipeline}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer dependency structure}}} among
+%     RVs\\
+%     \htt[lacamlilac]{\textbf{\emph{missing value estimation}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{anomaly detection}}}\\
+%   \end{minipage}  
+% \end{frame}
+
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Exploratory data analysis}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \includegraphics[width=.99\linewidth]{figures/abda-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+%     \vspace{-150pt}
+%     {The ``data understanding'' pipeline}\\[5pt]
+%     \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{infer dependency structure}}} among
+%     RVs\\
+%     \htt[lacamlilac]{\textbf{\emph{missing value estimation}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{anomaly detection}}}\\
+%     \htt[lacamlilac]{\textbf{\emph{extracting patterns}}}\\
+%   \end{minipage}  
+% \end{frame}
 
 
 \begin{frame}[t, htt=mpigreen]
   \frametitle{Automatic exploratory data analysis for non-statisticians}
-
+  \vspace{10pt}
   \includegraphics[width=1.04\linewidth]{figures/abda-full}\\
 
-  with ABDA we automate exploratory data analysis and make it
-  accessible for non-statisticians!
+  % with ABDA we automate exploratory data analysis and make it
+  % accessible for non-statisticians!
   
 \end{frame}
 
@@ -367,14 +551,19 @@
 
   \large
   \begin{minipage}[t]{0.3\linewidth}
+    \vspace{15pt}
     \includegraphics[width=.99\linewidth]{figures/joint-param-hspn-crop}
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-      ABDA captures  correlations among random variables RVs via
-  \emph{\textbf{latent variables} (LVs)} at
-  a \htt[pink2]{\textbf{\emph{top level}}} 
-  while modeling heterogeneous distributions at a
-  \htt[gold2]{\textbf{\emph{bottom level}}}
+  \end{minipage}\hfill\begin{minipage}[t]{0.6\linewidth}
+    \vspace{20pt}
+    In a nutshell, ABDA comprises\\[10pt]
+    a \htt[pink2]{\textbf{\emph{global level}}}
+    \hspace{-70pt}\comment[\normalsize]{modeling dependencies among RVs}{}\\
+    a \htt[gold2]{\textbf{\emph{local level}}}
+    \hspace{-55pt}\comment[\normalsize]{modeling heterogeneous distributions}{}
+  % a hierarchy of \emph{\textbf{latent variables} (LVs)} at
+  % a \htt[pink2]{\textbf{\emph{top level}}} 
+  % while modeling heterogeneous distributions at a
+  % \htt[gold2]{\textbf{\emph{bottom level}}}
   
   \end{minipage}  
 \end{frame}
@@ -383,102 +572,108 @@
   \frametitle{ABDA: representation}
 
   \large
+  \customcitenomark{Poon2011}
   \begin{minipage}[t]{0.3\linewidth}
+    \vspace{15pt}
     \includegraphics[width=.99\linewidth]{figures/joint-param-hspn-crop}
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/hspn}
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-      capturing  correlations among random variables RVs via
-  \emph{\textbf{latent variables} (LVs)} at
-  a \htt[pink2]{\textbf{\emph{top level}}} via a \emph{\textbf{Sum-Product
-    Network}} (\textbf{SPN})~\cite{Poon2011} 
-  \end{minipage}  
+    \vspace{20pt}
+    \includegraphics[width=.7\linewidth]{figures/hspn}
+  \end{minipage}\begin{minipage}[t]{0.35\linewidth}
+    \vspace{20pt}
+    \raggedright
+    The \htt[pink2]{\emph{\textbf{global level}}} comprises a
+    \emph{\textbf{ hierarchy of latent variables}}\\[20pt]
+    via a \emph{\textbf{Sum-Product Network}} (\textbf{SPN})\\
+  \end{minipage}
+
+  
 \end{frame}
-
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{ABDA: representation}
-
-  \large
-  \begin{minipage}[t]{0.3\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/joint-param-hspn-crop}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/type-leaf-crop}
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-      the 
-  \htt[gold2]{\textbf{\emph{bottom level}}}
-  via \textbf{\emph{dictionaries of likelihood models}} $\mathcal{L}^{d}$ for each
-  feature $d$
-  \end{minipage}  
-\end{frame}
-
 
 \begin{frame}[t, htt=bgrey2]
   \frametitle{SPNs}
 
   \large
+  \begin{minipage}[t]{0.25\linewidth}
+    \vspace{15pt}
+    \includegraphics[width=.9\linewidth]{figures/hspn}
+  \end{minipage}% \hfill\begin{minipage}[t]{0.3\linewidth}
+  %   \vspace{20pt}
+  %   \raggedright
+  %   An SPN compiles\par a joint distribution into:\\[10pt]
+  %   \emph{\textbf{sum}} nodes \hspace{-60pt}\comment[\small]{mixtures}{}
+  %   \emph{\textbf{product}} nodes\\
+  %   \comment[\small]{independent groups of RVs}{}
+  %   \emph{\textbf{leaf}} nodes\\
+  %   \comment[\small]{small, tractable models}{}
+  % \end{minipage}\hfill\begin{minipage}[t]{0.34\linewidth}
+  %   \vspace{10pt}
+  %   SPNs allow to tractably\\[10pt]
+    
+  %   \textbf{marginalize} any set of RVs\\
+    
+  %   compute any \textbf{conditional}\\
+    
+  %   perform \textbf{MPE} (approximate)\\
+  % \end{minipage}
+  \hfill\begin{minipage}[t]{0.65\linewidth}
+    \vspace{-120pt}
+    \raggedright
+    An SPN compiles a joint distribution into:\\[10pt]
+    \emph{\textbf{sum}} nodes \hspace{-100pt}\comment[\small]{mixtures}{}
+    \emph{\textbf{product}} nodes \hspace{-100pt}\comment[\small]{independent groups of RVs}{}
+    \emph{\textbf{leaf}} nodes\hspace{-100pt}
+    \comment[\small]{small, tractable models}{}    
+    SPNs allow to tractably\\[10pt]
+    \textbf{marginalize} any set of RVs    
+    % compute any \textbf{conditional}\\
+    perform \textbf{MPE} (approximate)
+  \end{minipage}
+\end{frame}
+
+
+\begin{frame}[t, htt=bgrey2]
+  \frametitle{ABDA: representation}
+
+  \large
   \begin{minipage}[t]{0.3\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/hspn}
+    \vspace{15pt}
+    \includegraphics[width=.99\linewidth]{figures/joint-param-hspn-crop}
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    sum nodes represents mixtures\\
-    product nodes are factorizations over independent RVs\\
-    leaf nodes are smaller tractable models
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{-150pt}
-    inference is tractable in SPNs:\\
-    to marginalize any RV\\
-    to compute conditionals\\
-    to perform MPE (approximate)\\
+    \vspace{15pt}
+    \includegraphics[width=.99\linewidth]{figures/type-leaf-crop}
+  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+    \vspace{40pt}
+    the \htt[gold2]{\textbf{\emph{local level}}}
+  comprises \textbf{\emph{dictionaries of likelihood models}}
   \end{minipage}  
 \end{frame}
+
+
 
 \begin{frame}[t, htt=bgrey2]
   \frametitle{ABDA: learning and inference}
 
   \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-partitioning}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    data-agnostic structure learning\\
+  \begin{minipage}[t]{0.5\linewidth}
+    \vspace{10pt}
+    \includegraphics[width=1.07\linewidth]{figures/abda-partitioning}
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \raggedright
+    \vspace{20pt}
 
-    partitioning of the data\\
+    Learning the hierarchy of
+    $\mathbf{Z}_{n}$\\
+    \comment[\small]{\textbf{\emph{data-agnostic structure
+        learning}}}{}% ~\customcitenomark{Molina2017b}
 
-    efficient inference via Gibbs sampling
-    
-  \end{minipage}  
-\end{frame}
+  \vspace{10pt}
+  LVs partitioning the data\\
+  \comment[\small]{\textbf{hierarchical co-clustering}!}{}
 
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Type inference}
-
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-miss-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    
-    
-  \end{minipage}  
-\end{frame}
-
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Type inference}
-
-  \large
-  \begin{minipage}[t]{0.66\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-type-inf}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    Best likelihood models explaining the data are inferred from the
-    dictionary via Gibbs sampling\\
-
-    Mixture proportions represent uncertainty over likelihood models\\
-
-    Therefore, one can reason about uncertainty over statistical types
-    as well\\
+  \vspace{10pt}
+  Bayesian posterior inference\\
+  \comment[\small]{efficient Gibbs sampling}{}
     
   \end{minipage}  
 \end{frame}
@@ -488,15 +683,60 @@
 
   \large
   \begin{minipage}[t]{0.5\linewidth}
-    %\includegraphics[width=.5\linewidth]{figures/N-2000-cont-param-conf-mat-crop}
-    \includegraphics[width=.5\linewidth]{figures/N-10000-cont-param-conf-mat-crop}
-    \includegraphics[width=.5\linewidth]{figures/cont-types-conf-mat-crop}\\
-    %\includegraphics[width=.5\linewidth]{figures/N-2000-disc-param-conf-mat-crop}
-    \includegraphics[width=.5\linewidth]{figures/N-10000-disc-param-conf-mat-crop}
-    \includegraphics[width=.5\linewidth]{figures/disc-type-conf-mat-crop}\\
+    \vspace{5pt}
+    \includegraphics[width=1.1\linewidth]{figures/abda-miss-hist-type}
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
     \vspace{-150pt}
-    Uncertainty over likelihood models recovered when a ground truth is available
+    
+    
+  \end{minipage}  
+\end{frame}
+
+\begin{frame}[t, htt=bgrey2]
+  \frametitle{Type inference}
+
+  \large
+  \begin{minipage}[t]{0.5\linewidth}
+    \includegraphics[width=1.25\linewidth]{figures/abda-type-inf}
+  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+    \raggedright
+    \vspace{-150pt}
+    \emph{\textbf{Best likelihood models explaining the data}} are inferred from the
+    dictionary\\[10pt]
+
+    Mixture proportions represent \emph{\textbf{uncertainty over likelihood models}}\\[10pt]
+
+    % Therefore, \textbf{\emph{reasoning over statistical data types}}\\
+    
+  \end{minipage}  
+\end{frame}
+
+\begin{frame}[t, htt=bgrey2]
+  \frametitle{Type inference}
+
+  \large
+  \begin{minipage}[t]{0.45\linewidth}
+    \vspace{0pt}
+    \includegraphics[width=.4\linewidth]{figures/N-2000-cont-param-conf-mat-crop}
+    \includegraphics[width=.41\linewidth]{figures/N-10000-cont-param-conf-mat-crop}\\[4pt]
+    %\includegraphics[width=.4\linewidth]{figures/cont-types-conf-mat-crop}\\
+    \includegraphics[width=.4\linewidth]{figures/N-2000-disc-param-conf-mat-crop}
+    \includegraphics[width=.41\linewidth]{figures/N-10000-disc-param-conf-mat-crop}
+    %\includegraphics[width=.4\linewidth]{figures/disc-type-conf-mat-crop}\\
+  \end{minipage}\hfill\begin{minipage}[t]{0.53\linewidth}
+    \raggedright
+    \vspace{20pt}
+
+    Extensive \textbf{\textbf{synthetic experiments}}\\
+    \comment[\small]{ground truth available}{}
+    \vspace{10pt}
+    
+    \textbf{Recovering uncertainty} over likelihoods\\
+     \comment[\small]{high cosine similarity over weight vectors}{}
+    \vspace{10pt}
+
+    Predicting most likely ``global types''\\
+    \comment[\small]{accurate up to small finite sample sizes}{}
     
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
     \vspace{-150pt}
@@ -510,11 +750,12 @@
 
   \large
   \begin{minipage}[t]{0.9\linewidth}
+    \vspace{0pt}
     %\includegraphics[width=.5\linewidth]{figures/N-2000-cont-param-conf-mat-crop}
-    \includegraphics[width=0.45\columnwidth]{figures/d1-fit-crop.pdf}
-    \includegraphics[width=0.45\columnwidth]{figures/d3-fit-crop.pdf}\\
-    \includegraphics[width=0.45\columnwidth]{figures/d5-fit-crop.pdf}
-    \includegraphics[width=0.45\columnwidth]{figures/d7-fit-crop.pdf}
+    \includegraphics[width=0.4\columnwidth]{figures/d1-fit-crop.pdf}\hspace{10pt}
+    \includegraphics[width=0.4\columnwidth]{figures/d3-fit-crop.pdf}\\[15pt]
+    \includegraphics[width=0.4\columnwidth]{figures/d5-fit-crop.pdf}\hspace{12pt}
+    \includegraphics[width=0.4\columnwidth]{figures/d7-fit-crop.pdf}
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
     \vspace{-150pt}
     % Uncertainty over likelihood models recovered when a ground truth is available
@@ -530,14 +771,19 @@
   \frametitle{Missing values estimation}
 
   \large
-  \begin{minipage}[t]{0.66\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-miss}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
-    Marginalizing over missing values is easy!\\
-    \comment{via SPN inference}\\
+  \begin{minipage}[t]{0.5\linewidth}
+    \vspace{10pt}
+    \includegraphics[width=1.1\linewidth]{figures/abda-miss}
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \raggedright
+    \vspace{10pt}
+    Marginalizing over missing values\\
+    \comment{easy via SPN inference!}{}
+    \vspace{15pt}
 
     Imputation via MPE inference\\
+    \comment{linear time approximation}{}
+    \vspace{-10pt}
     $$\tilde{\x}_{n}^{m}=\argmax_{\x_{n}^{m}}\SPN(\x_{n}^{m} \cndbar \x_{n}^{o})$$
     
   \end{minipage}  
@@ -547,9 +793,9 @@
   \frametitle{Missing values estimation}
 
   \large
-  \begin{minipage}[t]{0.66\linewidth}
+  \begin{minipage}[t]{0.5\linewidth}
      % \vspace{-35pt}
-      \fontsize{17}{18}\selectfont
+      \fontsize{15}{18}\selectfont
 %       \begin{table}[!t]
 
 % \tiny
@@ -583,7 +829,7 @@
 % \end{table}
             \begin{table}[!t]
 
-             \small
+             \footnotesize
     \setlength{\columnsep}{-10pt}
     %\centering
     \begin{tabular}{r r r r r r r r r}
@@ -613,16 +859,21 @@
       %\vspace{-6pt}
 \end{table}
 
-\end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+\end{minipage}\hfill\begin{minipage}[t]{0.48\linewidth}
+  \vspace{10pt}
+  \raggedright
   11 real-world benchmarks from UCI\\
+  \comment[\small]{repeated trials, different missing percentages}{}
+  \vspace{10pt}
 
-  Repeated exps for different missing values percentages\\
+  % Repeated exps for different missing values percentages\\
 
-  ABDA is more accurate than ISLV modeling uncertainty over
-  statistical data types\\
+  ABDA is more accurate than ISLV\\
+  \comment[\small]{also modeling statistical type uncertainty}{}
+  \vspace{10pt}
 
-  and more robust than MSPNs, employing the same data-agnostic
-  structure learning 
+  and more robust than MSPNs\\
+  \comment[\small]{same data-agnostic structure learning}{}
   
   \end{minipage}  
 \end{frame}
@@ -632,19 +883,25 @@
   \frametitle{Anomaly detection}
 
   \large
-  \begin{minipage}[t]{0.66\linewidth}
-    \includegraphics[width=.99\linewidth]{figures/abda-anomaly}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
+  \begin{minipage}[t]{0.5\linewidth}
+    \vspace{6pt}
+    \includegraphics[width=1.05\linewidth]{figures/abda-anomaly}
+  \end{minipage}\hfill\begin{minipage}[t]{0.45\linewidth}
+    \raggedright
+    \vspace{10pt}
 
-    ABDA might group outliers into micro-clusters\\
+    ABDA might group anomalies together\\
+    \comment[\small]{micro-clusters}{}
+    \vspace{10pt}
 
     or relegate them into low-density regions\\
-    \comment{tail of distributions}\\
+    \comment[\small]{tails of distributions}{}
+    \vspace{10pt}
     
-     $\log \SPN(\x_{n})$ can be used as a strong signal to indicate
-     $\x_{n}$ is an outlier (in the transductive case) or a
-     \textit{novelty} (in the inductive case)
+    $\log \SPN(\x_{n})$ as a strong anomaly score\\
+    \comment[\small]{for outliers (transductive case)}{}
+    \comment[\small]{for novelties (inductive case)}{}
+    
      
     
   \end{minipage}  
@@ -654,12 +911,12 @@
   \frametitle{Anomaly detection}
 
   \large
-  \begin{minipage}[t]{0.66\linewidth}
+  \begin{minipage}[t]{0.5\linewidth}
     \fontsize{17}{18}\selectfont
   \begin{table}[!t]
 %\scriptsize
-\small
-    \setlength{\tabcolsep}{2pt}
+\scriptsize
+    \setlength{\tabcolsep}{3pt}
     \begin{tabular}{r r r r r}
     
     %&\multicolumn{4}{c}{outlier detection}\\%&\multicolumn{3}{c}{10\%}&\multicolumn{3}{c}{50\%}\\
@@ -675,7 +932,7 @@
          \textsf{Letter}&63.38$\scriptstyle\scriptstyle\pm17.6$&\textbf{86.55}$\scriptstyle\scriptstyle\pm2.23$&60.47$\scriptstyle\scriptstyle\pm1.80$&70.36$\scriptstyle\scriptstyle\pm0.01$\\%68.61$\scriptstyle\scriptstyle\pm0.23$&\\
         \textsf{Pen-glo}&46.86$\scriptstyle\scriptstyle\pm1.02$&87.25$\scriptstyle\scriptstyle\pm1.94$&71.93$\scriptstyle\scriptstyle\pm1.68$&\textbf{89.87}$\scriptstyle\scriptstyle\pm2.87$\\%75.93$\scriptstyle\scriptstyle\pm0.14$&\\
          \textsf{Pen-loc}&44.11$\scriptstyle\scriptstyle\pm6.07$&\textbf{98.72}$\scriptstyle\scriptstyle\pm0.20$&64.30$\scriptstyle\scriptstyle\pm2.70$&90.86$\scriptstyle\scriptstyle\pm0.79$\\%79.25$\scriptstyle\scriptstyle\pm5.41$&\\
-         \textsf{Satellite}&52.14$\scriptstyle\scriptstyle\pm3.08$&83.51$\scriptstyle\scriptstyle\pm11.98$&90.92$\scriptstyle\scriptstyle\pm0.16$&\textbf{94.55}$\scriptstyle\scriptstyle\pm0.68$\\%\textbf{95.22}$\scriptstyle\scriptstyle\pm0.45$&\\
+         \textsf{Satellite}&52.14$\scriptstyle\scriptstyle\pm3.08$&83.51$\scriptstyle\scriptstyle\pm11.9$&90.92$\scriptstyle\scriptstyle\pm0.16$&\textbf{94.55}$\scriptstyle\scriptstyle\pm0.68$\\%\textbf{95.22}$\scriptstyle\scriptstyle\pm0.45$&\\
          \textsf{Shuttle}&89.37$\scriptstyle\scriptstyle\pm5.13$&66.29$\scriptstyle\scriptstyle\pm1.69$&\textbf{98.47}$\scriptstyle\scriptstyle\pm0.24$&78.61$\scriptstyle\scriptstyle\pm0.02$\\%94.96$\scriptstyle\scriptstyle\pm2.13$&\\
          \textsf{Speech}&45.61$\scriptstyle\scriptstyle\pm3.64$&\textbf{49.37}$\scriptstyle\scriptstyle\pm0.87$&47.47$\scriptstyle\scriptstyle\pm0.10$&46.96$\scriptstyle\scriptstyle\pm0.01$\\%48.24$\scriptstyle\scriptstyle\pm0.67$&\\
           \bottomrule
@@ -684,10 +941,10 @@
     \end{tabular}
       %
   \end{table}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-50pt}
+  \end{minipage}\hfill\begin{minipage}[t]{0.43\linewidth}
+    \vspace{0pt}
 
-    10 unsupervised outlier detection benchmarks\\
+    10 unsupervised\par \emph{\textbf{outlier detection benchmarks}}\\
 
     AUC roc performances\\
 
@@ -705,21 +962,23 @@
   \frametitle{Pattern mining}
 
   \large
-  \begin{minipage}[t]{0.66\linewidth}
+  \begin{minipage}[t]{0.6\linewidth}
+    \vspace{5pt}
     \includegraphics[width=.99\linewidth]{figures/abda-pattern-mining}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
+  \end{minipage}\hfill\begin{minipage}[t]{0.37\linewidth}
+    \raggedright
+    \vspace{10pt}
 
-    Extracting a single pattern from each leaf:
+    Single pattern from each leaf $\Leaf^d_{j}$:
 
     $$\mathcal{P}\colon \pi_{l}^{d}\leq X^{d}<\pi_{h}^{d}$$
 
-    for a certain user-specified thresholding:
+    for a user-specified threshold $\theta$:
 
-    $$\theta: p_{\Leaf^d_{j}}(\mathcal{P}) \geq \theta$$
+    $$p_{\Leaf^d_{j}}(\mathcal{P}) \geq \theta$$
 
-    Conjunction of patterns can be extracted by looking at partitions
-    $\mathcal{P}^{\Node}=\mathcal{P}_{1}\wedge\ldots\wedge\mathcal{P}_{|\scope(\Node)|}$
+    Conjunctive patterns\par from partitions
+    $$\mathcal{P}^{\Node}=\mathcal{P}_{1}\wedge\ldots\wedge\mathcal{P}_{|\scope(\Node)|}$$
 
      
     
@@ -731,49 +990,73 @@
   \frametitle{Pattern mining}
 
   \large
-  \begin{minipage}[t]{0.66\linewidth}
+  \begin{minipage}[t]{0.55\linewidth}
     {\scriptsize\begin{align*}
     %\mathcal{P}_{1}:& 0.0095\leq {\color{red}\mathsf{Height}}< 0.55 (supp(\mathcal{P}_{1})=0.97)\\
     \mathcal{P}_{1}:\quad 0.088&\leq {\color{abagreen}\mathsf{Height}}< 0.224\quad\wedge\\ 
     0.158&\leq {\color{abagreen}\mathsf{ShellWeight}}< 0.425 \quad(supp(\mathcal{P}_{1})=0.507)\\
     \mathcal{P}_{2}:\quad 0.483&\leq {\color{abapink}\mathsf{Length}}< 0.684\quad\wedge\\ 
     0.364&\leq {\color{abapink}\mathsf{Diameter}}< 0.547 \quad(supp(\mathcal{P}_{2})=0.489)\\
-    \mathcal{P}_{3}:\quad 0.596&\leq {\color{abagray}\mathsf{WholeWeight}}< 1.040\quad\wedge\\ 
-    0.205&\leq {\color{abagray}\mathsf{ShuckedWeight}}< 0.491 \quad\wedge\\
+    \mathcal{P}_{3}:\quad 0.596&\leq {\color{abagray}\mathsf{WholeWeight}}< 1.040\quad\wedge 
+    0.205\leq {\color{abagray}\mathsf{ShuckedWeight}}< 0.491 \quad\wedge\\
     0.076&\leq {\color{abagray}\mathsf{VisceraWeight}}< 0.281 \quad(supp(\mathcal{P}_{3})=0.223)\\
-    \mathcal{P}_{4}:\quad 0.596&\leq {\color{abayellow}\mathsf{WholeWeight}}< 1.040\quad\wedge\\ 
-    0.205&\leq {\color{abayellow}\mathsf{ShuckedWeight}}< 0.491 \quad\wedge\\
+    \mathcal{P}_{4}:\quad 0.596&\leq {\color{abayellow}\mathsf{WholeWeight}}< 1.040\quad\wedge 
+    0.205\leq {\color{abayellow}\mathsf{ShuckedWeight}}< 0.491 \quad\wedge\\
     0.076&\leq {\color{abayellow}\mathsf{VisceraWeight}}< 0.281 \quad(supp(\mathcal{P}_{4})=0.202)\\
-    \mathcal{P}_{5}:\quad 0.313&\leq {\color{ababrown}\mathsf{Length}}< 0.554\quad\wedge\\ 
-    \quad 0.230&\leq {\color{ababrown}\mathsf{Diameter}}< 0.438\quad\wedge\\ 
-    \quad 0.023&\leq {\color{ababrown}\mathsf{Height}}< 0.197\quad\wedge\\ 
-    \quad 0.165&\leq {\color{ababrown}\mathsf{WholeWeight}}< 0.639\quad\wedge\\ 
-    0.037&\leq {\color{ababrown}\mathsf{ShuckedWeight}}< 0.408 \quad\wedge\\
-    0.019&\leq {\color{ababrown}\mathsf{VisceraWeight}}<0.192 \quad\wedge\\
-    0.027&\leq {\color{ababrown}\mathsf{ShellWeight}}< 0.27 \quad\wedge\\
-    \quad 5&\leq {\color{ababrown}\mathsf{Rings}}<13\quad(supp(\mathcal{P}_{5})=0.111)\\
+    \mathcal{P}_{5}:\quad 0.313&\leq {\color{ababrown}\mathsf{Length}}< 0.554\quad\wedge 
+    \quad 0.230\leq {\color{ababrown}\mathsf{Diameter}}< 0.438\quad\wedge\\ 
+    \quad 0.023&\leq {\color{ababrown}\mathsf{Height}}< 0.197\quad\wedge 
+    \quad 0.165\leq {\color{ababrown}\mathsf{WholeWeight}}< 0.639\quad\wedge\\ 
+    0.037&\leq {\color{ababrown}\mathsf{ShuckedWeight}}< 0.408 \quad\wedge
+    0.019\leq {\color{ababrown}\mathsf{VisceraWeight}}<0.192 \quad\wedge\\
+    0.027&\leq {\color{ababrown}\mathsf{ShellWeight}}< 0.27 \quad\wedge
+    \quad 5\leq {\color{ababrown}\mathsf{Rings}}<13\quad(supp(\mathcal{P}_{5})=0.111)\\
 \end{align*}
 }  
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-50pt}
-They can be ranked by their \emph{relevance} or \emph{support}, that
-is $p_{\SPN}(\mathcal{P}^{\Node})$.
+  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+    \vspace{-20pt}
+Ranking by their \emph{relevance} aka \emph{support}:
+$$p_{\SPN}(\mathcal{P}^{\Node})$$
      
     
   \end{minipage}  
 \end{frame}
 
+
+
 \begin{frame}[t, htt=mpigreen]
   \frametitle{Automatic exploratory data analysis for non-statisticians}
-
+\vspace{10pt}
   \includegraphics[width=1.04\linewidth]{figures/abda-full}\\
 
-  with ABDA we automate exploratory data analysis and make it
-  accessible for non-statisticians!
+  % with ABDA we automate exploratory data analysis and make it
+  % accessible for non-statisticians!
   
 \end{frame}
 
 
+\begin{frame}
+  \frametitle{}
+
+  {\usebeamerfont{frametitle}\usebeamercolor{frametitle}
+    \htt[mpigreen]{poster}}\\[3pt]
+  \begin{center}
+    \large to chat more, poster number \textbf{5839}
+  \end{center}\par\bigskip
+
+  {\usebeamerfont{frametitle}\usebeamercolor{frametitle}
+    \htt[mpigreen]{code}}\\[3pt]
+  \begin{center}
+    \large\url{github.com/probabilistic-learning/abda}
+  \end{center}\par\bigskip
+
+  {\usebeamerfont{frametitle}\usebeamercolor{frametitle}
+    \htt[mpigreen]{\dots and even more on SPNs}}\\[3pt]
+  Star or fork on github for \textbf{more references} and \textbf{code} to the SPN literature:\vspace{-5pt}
+  \begin{center}
+    \large\url{github.com/arranger1044/awesome-spn}
+  \end{center}\par\bigskip
+\end{frame}
 
  
 \begin{frame}[allowframebreaks]
