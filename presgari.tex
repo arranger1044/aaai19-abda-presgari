@@ -19,6 +19,7 @@
 \usepackage{bm}
 \usepackage{dsfont}
 \usepackage{subcaption}
+\usepackage[absolute,overlay]{textpos}
 
 \usepackage[font=scriptsize]{caption}
 
@@ -84,7 +85,7 @@
 
 \addbibresource{referomnia.bib}
 
-
+\setbeamertemplate{footline}[frame number]
 
 \definecolor{wwine} {HTML} {cccaa9}
 \definecolor{rwine} {HTML} {770a2d}
@@ -169,19 +170,28 @@
   
 % \end{frame}
 
+\setbeamerfont{footnote}{size=\scriptsize}
+%\addtobeamertemplate{footnote}{}{\vspace{16pt}}
+\newcommand{\customcite}[1]{\footnote{\tiny \citeauthor{#1},
+    \citetitle{#1}, \citeyear{#1}}}
+\newcommand{\customcitenomark}[1]{\footnotenomarkleft{\tiny
+    \citeauthor{#1}, \citetitle{#1}, \citeyear{#1}}}
+\newcommand{\customcitetext}[1]{\footnotenomarkleft{\tiny \citeauthor{#1}, \citetitle{#1}, \citeyear{#1}}}
 
 
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Exploratory data analysis}
+
+\begin{frame}[t]
+  \frametitle{}
   \large
   \begin{minipage}[t]{0.4\linewidth}\vspace{15pt}
+    \vspace{40pt}
     \includegraphics[width=.5\linewidth]{figures/abda-grid-empty}
   \end{minipage}\hfill\begin{minipage}[t]{0.55\linewidth}
     \vspace{20pt}
-    Before any machine learning task\ldots\\[20pt]
-    \ldots there is the need of \\[5pt]
-    \hspace{5pt}\htt[lacamlilac]{\emph{\textbf{understanding}}} data\\[-2pt]
-    \hspace{5pt}\htt[lacamlilac]{\emph{\textbf{making sense}}} of data\\
+    % Before any machine learning task\ldots\\[20pt]
+    % \ldots there is the need of \\[5pt]
+    % \hspace{5pt}\htt[lacamlilac]{\emph{\textbf{understanding}}} data\\[-2pt]
+    % \hspace{5pt}\htt[lacamlilac]{\emph{\textbf{making sense}}} of data\\
   \end{minipage}  
 \end{frame}
 
@@ -279,7 +289,7 @@
     {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
     \raggedleft\begin{minipage}[t]{.9\linewidth}
       {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical types}}}\\[5pt]}
-    {\comment[\normalsize]{is it a positive RV?}{}\\[-17pt]
+    {\comment[\normalsize]{is it a Gaussian?}{}\\[-17pt]
       \comment[\normalsize]{is it an ordinal RV?}{}\\}
     \end{minipage}    
     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
@@ -287,6 +297,28 @@
   \end{minipage}  
 \end{frame}
 
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Exploratory data analysis}
+
+%   \large
+%   \begin{minipage}[t]{0.6\linewidth}
+%     \vspace{5pt}
+%     \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
+%     \vspace{10pt}
+%     {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
+%     \raggedleft\begin{minipage}[t]{.9\linewidth}
+%       {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
+%               types}}}\\[-2pt]}
+%       {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\[5pt]}
+%     {\comment[\normalsize]{is it a Gaussian?}{}\\[-17pt]
+%       \comment[\normalsize]{is it a Poisson?}{}\\}
+%     \end{minipage}    
+%     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
+%     % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
+%   \end{minipage}  
+% \end{frame}
+
 \begin{frame}[t, htt=bgrey2]
   \frametitle{Exploratory data analysis}
 
@@ -300,31 +332,9 @@
     \raggedleft\begin{minipage}[t]{.9\linewidth}
       {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
               types}}}\\[-2pt]}
-      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood models}}}\\[5pt]}
-    {\comment[\normalsize]{is it a Gaussian?}{}\\[-17pt]
-      \comment[\normalsize]{is it a Poisson?}{}\\}
-    \end{minipage}    
-    % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
-    % \htt[lacamlilac]{\textbf{\emph{anomalous}}}\\
-  \end{minipage}  
-\end{frame}
-
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Exploratory data analysis}
-
-  \large
-  \begin{minipage}[t]{0.6\linewidth}
-    \vspace{5pt}
-    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
-    \vspace{10pt}
-    {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
-    \raggedleft\begin{minipage}[t]{.9\linewidth}
-      {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
-              types}}}\\[-2pt]}
-      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
-              models}}}\\[-2pt]}
-      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer dependencies}}}\\[5pt]}
+      % {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+      %         models}}}\\[-2pt]}
+      {\textbf{1b.}\hspace{0pt} \htt[lacamlilac]{\textbf{\emph{infer dependencies}}}\\[5pt]}
     \comment[\normalsize]{does $X^{4}$ depend on $X^{1}$?}{}
     \end{minipage}    
     % \htt[lacamlilac]{\textbf{\emph{incomplete}}}\\
@@ -338,16 +348,16 @@
   \large
   \begin{minipage}[t]{0.6\linewidth}
     \vspace{5pt}
-    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+    \includegraphics[width=.9\linewidth]{figures/abda-miss-hist-type}
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
     \vspace{10pt}
     {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
     \raggedleft\begin{minipage}[t]{.9\linewidth}
       {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
               types}}}\\[-2pt]}
-      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
-              models}}}\\[-2pt]}
-      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+      % {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+      %         models}}}\\[-2pt]}
+      {\textbf{1b.}\hspace{0pt} \htt[lacamlilac]{\textbf{\emph{infer
               dependencies}}}\\[-2pt]}
       {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
               values estimation}}}\\[-2pt]}
@@ -363,16 +373,16 @@
   \large
   \begin{minipage}[t]{0.6\linewidth}
     \vspace{5pt}
-    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+    \includegraphics[width=.9\linewidth]{figures/abda-miss-hist-type}
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
     \vspace{10pt}
     {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
     \raggedleft\begin{minipage}[t]{.9\linewidth}
       {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
               types}}}\\[-2pt]}
-      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
-              models}}}\\[-2pt]}
-      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+      % {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+      %         models}}}\\[-2pt]}
+      {\textbf{1b.}\hspace{0pt} \htt[lacamlilac]{\textbf{\emph{infer
               dependencies}}}\\[-2pt]}
       {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
               values estimation}}}\\[-2pt]}
@@ -388,16 +398,16 @@
   \large
   \begin{minipage}[t]{0.6\linewidth}
     \vspace{5pt}
-    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+    \includegraphics[width=.9\linewidth]{figures/abda-miss-hist-type}
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
     \vspace{10pt}
     {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
     \raggedleft\begin{minipage}[t]{.9\linewidth}
       {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
               types}}}\\[-2pt]}
-      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
-              models}}}\\[-2pt]}
-      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+      % {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+      %         models}}}\\[-2pt]}
+      {\textbf{1b.}\hspace{0pt} \htt[lacamlilac]{\textbf{\emph{infer
               dependencies}}}\\[-2pt]}
       {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
               values estimation}}}\\[-2pt]}
@@ -415,16 +425,16 @@
   \large
   \begin{minipage}[t]{0.6\linewidth}
     \vspace{5pt}
-    \includegraphics[width=.9\linewidth]{figures/abda-hist-type}
+    \includegraphics[width=.9\linewidth]{figures/abda-miss-hist-type}
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
     \vspace{10pt}
     {The ``\emph{\textbf{data understanding}}'' pipeline}\\[3pt]
     \raggedleft\begin{minipage}[t]{.9\linewidth}
       {\textbf{1a.} \htt[lacamlilac]{\textbf{\emph{infer statistical
               types}}}\\[-2pt]}
-      {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
-              models}}}\\[-2pt]}
-      {\textbf{1c.}\hspace{1pt} \htt[lacamlilac]{\textbf{\emph{infer
+      % {\textbf{1b.} \htt[lacamlilac]{\textbf{\emph{infer likelihood
+      %         models}}}\\[-2pt]}
+      {\textbf{1b.}\hspace{0pt} \htt[lacamlilac]{\textbf{\emph{infer
               dependencies}}}\\[-2pt]}
       {\textbf{2.}\hspace{6pt} \htt[lacamlilac]{\textbf{\emph{missing
               values estimation}}}\\[-2pt]}
@@ -554,16 +564,16 @@
     \vspace{15pt}
     \includegraphics[width=.99\linewidth]{figures/joint-param-hspn-crop}
   \end{minipage}\hfill\begin{minipage}[t]{0.6\linewidth}
-    \vspace{20pt}
-    In a nutshell, ABDA comprises\\[10pt]
-    a \htt[pink2]{\textbf{\emph{global level}}}
-    \hspace{-70pt}\comment[\normalsize]{modeling dependencies among RVs}{}\\
-    a \htt[gold2]{\textbf{\emph{local level}}}
-    \hspace{-55pt}\comment[\normalsize]{modeling heterogeneous distributions}{}
+    \vspace{40pt}
+    %In a nutshell, ABDA comprises\\[10pt]
+    \htt[pink2]{\textbf{\emph{global level}}}
+    \hspace{-100pt}\comment[\normalsize]{dependencies among features}{}\\
+    \htt[gold2]{\textbf{\emph{local level}}}
+    \hspace{-110pt}\comment[\normalsize]{heterogeneous data types}{}
   % a hierarchy of \emph{\textbf{latent variables} (LVs)} at
   % a \htt[pink2]{\textbf{\emph{top level}}} 
   % while modeling heterogeneous distributions at a
-  % \htt[gold2]{\textbf{\emph{bottom level}}}
+  % \htt[gold2]{\textbf{\emph{bottom level}}}<
   
   \end{minipage}  
 \end{frame}
@@ -572,20 +582,21 @@
   \frametitle{ABDA: representation}
 
   \large
-  \customcitenomark{Poon2011}
+  %\customcitenomark{Poon2011}
   \begin{minipage}[t]{0.3\linewidth}
     \vspace{15pt}
     \includegraphics[width=.99\linewidth]{figures/joint-param-hspn-crop}
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
     \vspace{20pt}
     \includegraphics[width=.7\linewidth]{figures/hspn}
-  \end{minipage}\begin{minipage}[t]{0.35\linewidth}
-    \vspace{20pt}
+  \end{minipage}\begin{minipage}[t]{0.37\linewidth}
+    \vspace{30pt}
     \raggedright
-    The \htt[pink2]{\emph{\textbf{global level}}} comprises a
+    \htt[pink2]{\emph{\textbf{global level}}} comprises a
     \emph{\textbf{ hierarchy of latent variables}}\\[20pt]
-    via a \emph{\textbf{Sum-Product Network}} (\textbf{SPN})\\
+    $\color{violet}\boldsymbol\Rightarrow$ \emph{\textbf{Sum-Product Network}} (\textbf{SPN})\\
   \end{minipage}
+  % \parencite{Poon2011}
 
   
 \end{frame}
@@ -619,15 +630,16 @@
   \hfill\begin{minipage}[t]{0.65\linewidth}
     \vspace{-120pt}
     \raggedright
-    An SPN compiles a joint distribution into:\\[10pt]
-    \emph{\textbf{sum}} nodes \hspace{-100pt}\comment[\small]{mixtures}{}
-    \emph{\textbf{product}} nodes \hspace{-100pt}\comment[\small]{independent groups of RVs}{}
-    \emph{\textbf{leaf}} nodes\hspace{-100pt}
-    \comment[\small]{small, tractable models}{}    
-    SPNs allow to tractably\\[10pt]
-    \textbf{marginalize} any set of RVs    
+    An SPN compiles a joint distribution into:\\[4pt]
+    \emph{\textbf{sum}} nodes \hspace{-167pt}\comment[\small]{mixtures}{}
+    \emph{\textbf{product}} nodes \hspace{-120pt}\comment[\small]{independent groups of RVs}{}
+    \emph{\textbf{leaf}} nodes\hspace{-115pt}
+    \comment[\small]{small, tractable models}{}
+    \vspace{20pt}
+    SPNs allow to tractably\\[4pt]
+    \textbf{marginalize} any set of RVs\\    
     % compute any \textbf{conditional}\\
-    perform \textbf{MPE} (approximate)
+    perform \textbf{MAP inference} (approximate)
   \end{minipage}
 \end{frame}
 
@@ -644,8 +656,9 @@
     \includegraphics[width=.99\linewidth]{figures/type-leaf-crop}
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
     \vspace{40pt}
-    the \htt[gold2]{\textbf{\emph{local level}}}
-  comprises \textbf{\emph{dictionaries of likelihood models}}
+    \raggedright
+    The \htt[gold2]{\textbf{\emph{local level}}}
+  comprises mixtures over\par \textbf{\emph{collections of likelihood models}}
   \end{minipage}  
 \end{frame}
 
@@ -673,24 +686,24 @@
 
   \vspace{10pt}
   Bayesian posterior inference\\
-  \comment[\small]{efficient Gibbs sampling}{}
+  \comment[\small]{\textbf{efficient Gibbs sampling}}{}
     
   \end{minipage}  
 \end{frame}
 
-\begin{frame}[t, htt=bgrey2]
-  \frametitle{Type inference}
+% \begin{frame}[t, htt=bgrey2]
+%   \frametitle{Type inference}
 
-  \large
-  \begin{minipage}[t]{0.5\linewidth}
-    \vspace{5pt}
-    \includegraphics[width=1.1\linewidth]{figures/abda-miss-hist-type}
-  \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
-    \vspace{-150pt}
+%   \large
+%   \begin{minipage}[t]{0.5\linewidth}
+%     \vspace{5pt}
+%     \includegraphics[width=1.1\linewidth]{figures/abda-miss-hist-type}
+%   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
+%     \vspace{-150pt}
     
     
-  \end{minipage}  
-\end{frame}
+%   \end{minipage}  
+% \end{frame}
 
 \begin{frame}[t, htt=bgrey2]
   \frametitle{Type inference}
@@ -700,9 +713,8 @@
     \includegraphics[width=1.25\linewidth]{figures/abda-type-inf}
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
     \raggedright
-    \vspace{-150pt}
-    \emph{\textbf{Best likelihood models explaining the data}} are inferred from the
-    dictionary\\[10pt]
+    \vspace{-120pt}
+    \emph{\textbf{Best likelihood models explaining the data}}\\[25pt]
 
     Mixture proportions represent \emph{\textbf{uncertainty over likelihood models}}\\[10pt]
 
@@ -723,19 +735,21 @@
     \includegraphics[width=.4\linewidth]{figures/N-2000-disc-param-conf-mat-crop}
     \includegraphics[width=.41\linewidth]{figures/N-10000-disc-param-conf-mat-crop}
     %\includegraphics[width=.4\linewidth]{figures/disc-type-conf-mat-crop}\\
-  \end{minipage}\hfill\begin{minipage}[t]{0.53\linewidth}
+  \end{minipage}\hfill\begin{minipage}[t]{0.5\linewidth}
     \raggedright
     \vspace{20pt}
 
-    Extensive \textbf{\textbf{synthetic experiments}}\\
+    Extensive \emph{\textbf{\textbf{synthetic experiments}}}\\
     \comment[\small]{ground truth available}{}
-    \vspace{10pt}
+    \vspace{15pt}
     
-    \textbf{Recovering uncertainty} over likelihoods\\
+    \emph{\textbf{Recovering uncertainty}} over likelihoods\\
      \comment[\small]{high cosine similarity over weight vectors}{}
-    \vspace{10pt}
+    \vspace{15pt}
 
-    Predicting most likely ``global types''\\
+    Predicting most likely ``\textbf{global types}''\\
+    \comment[\small]{e.g., $X^{1}$ is Gaussian, $X^{4}$ is Poisson}{}
+    \vspace{-1pt}
     \comment[\small]{accurate up to small finite sample sizes}{}
     
   \end{minipage}\hfill\begin{minipage}[t]{0.3\linewidth}
@@ -776,14 +790,14 @@
     \includegraphics[width=1.1\linewidth]{figures/abda-miss}
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
     \raggedright
-    \vspace{10pt}
-    Marginalizing over missing values\\
-    \comment{easy via SPN inference!}{}
     \vspace{15pt}
+    \emph{\textbf{Marginalizing}} over missing values\\
+    \comment{easy via SPN inference!}{}
+    \vspace{18pt}
 
-    Imputation via MPE inference\\
-    \comment{linear time approximation}{}
-    \vspace{-10pt}
+    Imputation via MAP inference\\
+    \comment{\textbf{linear time} approximation}{}
+    \vspace{-7pt}
     $$\tilde{\x}_{n}^{m}=\argmax_{\x_{n}^{m}}\SPN(\x_{n}^{m} \cndbar \x_{n}^{o})$$
     
   \end{minipage}  
@@ -859,20 +873,20 @@
       %\vspace{-6pt}
 \end{table}
 
-\end{minipage}\hfill\begin{minipage}[t]{0.48\linewidth}
-  \vspace{10pt}
+\end{minipage}\hfill\begin{minipage}[t]{0.45\linewidth}
+  \vspace{20pt}
   \raggedright
-  11 real-world benchmarks from UCI\\
+  \emph{\textbf{Real-world benchmarks}} from UCI\\
   \comment[\small]{repeated trials, different missing percentages}{}
-  \vspace{10pt}
+  \vspace{20pt}
 
   % Repeated exps for different missing values percentages\\
 
-  ABDA is more accurate than ISLV\\
+  \emph{\textbf{Faster}} and  \emph{\textbf{more accurate}} than ISLV\\
   \comment[\small]{also modeling statistical type uncertainty}{}
-  \vspace{10pt}
+  \vspace{20pt}
 
-  and more robust than MSPNs\\
+  and \emph{\textbf{more robust}} than MSPNs\\
   \comment[\small]{same data-agnostic structure learning}{}
   
   \end{minipage}  
@@ -885,22 +899,22 @@
   \large
   \begin{minipage}[t]{0.5\linewidth}
     \vspace{6pt}
-    \includegraphics[width=1.05\linewidth]{figures/abda-anomaly}
-  \end{minipage}\hfill\begin{minipage}[t]{0.45\linewidth}
+    \includegraphics[width=1.04\linewidth]{figures/abda-anomaly}
+  \end{minipage}\hfill\begin{minipage}[t]{0.43\linewidth}
     \raggedright
     \vspace{10pt}
 
-    ABDA might group anomalies together\\
+    \emph{\textbf{Grouping anomalies together}}\\
     \comment[\small]{micro-clusters}{}
-    \vspace{10pt}
+    \vspace{20pt}
 
-    or relegate them into low-density regions\\
-    \comment[\small]{tails of distributions}{}
-    \vspace{10pt}
+    relegating them into \emph{\textbf{low-density regions}}\\[-12pt]
+    \comment[\small]{e.g., tails of distributions}{}
+    \vspace{20pt}
     
-    $\log \SPN(\x_{n})$ as a strong anomaly score\\
-    \comment[\small]{for outliers (transductive case)}{}
-    \comment[\small]{for novelties (inductive case)}{}
+    log-likelihood as anomaly score\\
+    \comment[\small]{for \textbf{\textbf{outliers}} (transductive case)}{}
+    \comment[\small]{for {\textbf{novelties}} (inductive case)}{}
     
      
     
@@ -942,18 +956,19 @@
       %
   \end{table}
   \end{minipage}\hfill\begin{minipage}[t]{0.43\linewidth}
-    \vspace{0pt}
+    \vspace{20pt}
+    \raggedright
+    \emph{\textbf{Unsupervised outlier detection}} real-world benchmarks\\[20pt]
 
-    10 unsupervised\par \emph{\textbf{outlier detection benchmarks}}\\
+    % AUC roc performances\\
 
-    AUC roc performances\\
-
-    ABDA is competitive vs baselines:\\
-    one-class SVMs\\
-    Local outlier factor (LOF)\\
-    Histogram-based outlier score (HBOS)\\
-    ISLV\\
-    MSPNs\\
+    \emph{\textbf{ABDA is competitive}} w.r.t.\par
+    methods specifically designed for outlier detection\\
+    % one-class SVMs\\
+    % Local outlier factor (LOF)\\
+    % Histogram-based outlier score (HBOS)\\
+    % ISLV\\
+    % MSPNs\\
   \end{minipage}  
 \end{frame}
 
@@ -969,15 +984,15 @@
     \raggedright
     \vspace{10pt}
 
-    Single pattern from each leaf $\Leaf^d_{j}$:
+    \emph{\textbf{Single pattern}} from each leaf $\Leaf^d_{j}$:
 
     $$\mathcal{P}\colon \pi_{l}^{d}\leq X^{d}<\pi_{h}^{d}$$
 
     for a user-specified threshold $\theta$:
 
-    $$p_{\Leaf^d_{j}}(\mathcal{P}) \geq \theta$$
+    $$\mathcal{S}_{\Leaf^d_{j}}(\mathcal{P}) \geq \theta$$
 
-    Conjunctive patterns\par from partitions
+    \emph{\textbf{Conjunctive patterns}}\par from partitions
     $$\mathcal{P}^{\Node}=\mathcal{P}_{1}\wedge\ldots\wedge\mathcal{P}_{|\scope(\Node)|}$$
 
      
@@ -994,15 +1009,15 @@
     {\scriptsize\begin{align*}
     %\mathcal{P}_{1}:& 0.0095\leq {\color{red}\mathsf{Height}}< 0.55 (supp(\mathcal{P}_{1})=0.97)\\
     \mathcal{P}_{1}:\quad 0.088&\leq {\color{abagreen}\mathsf{Height}}< 0.224\quad\wedge\\ 
-    0.158&\leq {\color{abagreen}\mathsf{ShellWeight}}< 0.425 \quad(supp(\mathcal{P}_{1})=0.507)\\
+    0.158&\leq {\color{abagreen}\mathsf{ShellWeight}}< 0.425 \quad(\mathbf{supp}(\mathcal{P}_{1})=0.507)\\
     \mathcal{P}_{2}:\quad 0.483&\leq {\color{abapink}\mathsf{Length}}< 0.684\quad\wedge\\ 
-    0.364&\leq {\color{abapink}\mathsf{Diameter}}< 0.547 \quad(supp(\mathcal{P}_{2})=0.489)\\
+    0.364&\leq {\color{abapink}\mathsf{Diameter}}< 0.547 \quad(\mathbf{supp}(\mathcal{P}_{2})=0.489)\\
     \mathcal{P}_{3}:\quad 0.596&\leq {\color{abagray}\mathsf{WholeWeight}}< 1.040\quad\wedge 
     0.205\leq {\color{abagray}\mathsf{ShuckedWeight}}< 0.491 \quad\wedge\\
-    0.076&\leq {\color{abagray}\mathsf{VisceraWeight}}< 0.281 \quad(supp(\mathcal{P}_{3})=0.223)\\
+    0.076&\leq {\color{abagray}\mathsf{VisceraWeight}}< 0.281 \quad(\mathbf{supp}(\mathcal{P}_{3})=0.223)\\
     \mathcal{P}_{4}:\quad 0.596&\leq {\color{abayellow}\mathsf{WholeWeight}}< 1.040\quad\wedge 
     0.205\leq {\color{abayellow}\mathsf{ShuckedWeight}}< 0.491 \quad\wedge\\
-    0.076&\leq {\color{abayellow}\mathsf{VisceraWeight}}< 0.281 \quad(supp(\mathcal{P}_{4})=0.202)\\
+    0.076&\leq {\color{abayellow}\mathsf{VisceraWeight}}< 0.281 \quad(\mathbf{supp}(\mathcal{P}_{4})=0.202)\\
     \mathcal{P}_{5}:\quad 0.313&\leq {\color{ababrown}\mathsf{Length}}< 0.554\quad\wedge 
     \quad 0.230\leq {\color{ababrown}\mathsf{Diameter}}< 0.438\quad\wedge\\ 
     \quad 0.023&\leq {\color{ababrown}\mathsf{Height}}< 0.197\quad\wedge 
@@ -1010,14 +1025,16 @@
     0.037&\leq {\color{ababrown}\mathsf{ShuckedWeight}}< 0.408 \quad\wedge
     0.019\leq {\color{ababrown}\mathsf{VisceraWeight}}<0.192 \quad\wedge\\
     0.027&\leq {\color{ababrown}\mathsf{ShellWeight}}< 0.27 \quad\wedge
-    \quad 5\leq {\color{ababrown}\mathsf{Rings}}<13\quad(supp(\mathcal{P}_{5})=0.111)\\
+    \quad 5\leq {\color{ababrown}\mathsf{Rings}}<13\quad(\mathbf{supp}(\mathcal{P}_{5})=0.111)\\
 \end{align*}
 }  
   \end{minipage}\hfill\begin{minipage}[t]{0.4\linewidth}
     \vspace{-20pt}
-Ranking by their \emph{relevance} aka \emph{support}:
-$$p_{\SPN}(\mathcal{P}^{\Node})$$
-     
+
+     \begin{textblock*}{20em}(25em, 7em)
+Ranking by their \emph{relevance} aka \textbf{\emph{support}}:\vspace{-5pt}
+$$p_{\SPN}(\mathcal{P}^{i})$$
+\end{textblock*}
     
   \end{minipage}  
 \end{frame}
@@ -1038,34 +1055,41 @@ $$p_{\SPN}(\mathcal{P}^{\Node})$$
 \begin{frame}
   \frametitle{}
 
-  {\usebeamerfont{frametitle}\usebeamercolor{frametitle}
-    \htt[mpigreen]{poster}}\\[3pt]
-  \begin{center}
-    \large to chat more, poster number \textbf{5839}
-  \end{center}\par\bigskip
+  {\vspace{20pt}
+    \htt[mpigreen]{\Large\emph{\textbf{for the details}}}}\hspace{23pt}
+  % \begin{center}
+  \Large visit us at poster \#\textbf{5839}
+  \par\bigskip\bigskip
+  % \end{center}\par\bigskip
 
-  {\usebeamerfont{frametitle}\usebeamercolor{frametitle}
-    \htt[mpigreen]{code}}\\[3pt]
-  \begin{center}
-    \large\url{github.com/probabilistic-learning/abda}
-  \end{center}\par\bigskip
+  {%\usebeamerfont{frametitle}\usebeamercolor{frametitle}
+    \htt[mpigreen]{\emph{\textbf{code}}}}\hspace{75pt}
+  %\begin{center}
+    \Large\url{github.com/probabilistic-learning/abda}\par\bigskip\bigskip
+  %\end{center}\par\bigskip
 
-  {\usebeamerfont{frametitle}\usebeamercolor{frametitle}
-    \htt[mpigreen]{\dots and even more on SPNs}}\\[3pt]
-  Star or fork on github for \textbf{more references} and \textbf{code} to the SPN literature:\vspace{-5pt}
-  \begin{center}
-    \large\url{github.com/arranger1044/awesome-spn}
-  \end{center}\par\bigskip
+  {%\usebeamerfont{frametitle}\usebeamercolor{frametitle}
+    \htt[mpigreen]{\textbf{\emph{for more on SPNs}}}}\hspace{10pt}
+  %\begin{center}
+    \Large\url{github.com/SPFlow/SPFlow}\par\bigskip\bigskip
+  %\end{center}
+  
+  {%\usebeamerfont{frametitle}\usebeamercolor{frametitle}
+    \htt[mpigreen]{\textbf{\emph{\dots and even more}}}}\hspace{12pt}
+  % Star or fork on github for \textbf{more references} and \textbf{code} to the SPN literature:\vspace{-5pt}
+  %\begin{center}
+    \Large\url{github.com/arranger1044/awesome-spn}
+  %\end{center}\par\bigskip
 \end{frame}
 
  
-\begin{frame}[allowframebreaks]
-  \frametitle{References}
-  \setlength\bibitemsep{8pt}
-  \printbibliography
-\end{frame}
+% \begin{frame}[allowframebreaks]
+%   \frametitle{References}
+%   \setlength\bibitemsep{8pt}
+%   \printbibliography
+% \end{frame}
 
-out
+
 \end{document}
 
 %%% Local Variables:
